@@ -1,0 +1,30 @@
+table,tbody{
+    align-items: center;
+    align-self: center;
+    margin: 3% ;
+    max-width: 400px;
+}
+input{
+    border: 2px solid;
+    border-radius: 5px;
+    
+}
+label.li{
+  border: 2px solid;
+  border-radius: 5px;
+  padding-right: 15ch;
+}
+
+/* #body{
+  background-image: url("C:\Users\admin\angular-my-first-app\src\app\accounting\toptal-blog-image-1518523133236-d2bc894552c77f954f1e5ce48da6604d.png");
+} */
+h1{
+  font-family:georgia,garamond,serif;
+  font-style:italic;
+  
+}
+td{
+  font-family:georgia,garamond,serif;
+  font-size:16px;
+  font-style:italic
+}
