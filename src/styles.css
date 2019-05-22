@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 #body{
-  background-image: url("C:\Users\admin\angular-my-first-app\src\app\accounting\toptal-blog-image-1518523133236-d2bc894552c77f954f1e5ce48da6604d.png");
+  /* background-image: url("C:\Users\admin\angular-my-first-app\src\app\accounting\toptal-blog-image-1518523133236-d2bc894552c77f954f1e5ce48da6604d.png"); */
+  /* background-image: url("C:\Users\admin\angular-my-first-app\src\assets\images.jpg"); */
+  
+  /* background: -webkit-linear-gradient(left, rgb(150, 185, 159), rgb(150, 185, 159)); 
+  background: -o-linear-gradient(right, rgb(150, 185, 159), rgb(150, 185, 159));
+  background: -moz-linear-gradient(right, rgb(150, 185, 159), rgb(150, 185, 159)); 
+  background: linear-gradient(to right, rgb(150, 185, 159), rgb(150, 185, 159));  */
+  
 }

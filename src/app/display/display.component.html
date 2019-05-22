@@ -1,0 +1,63 @@
+<div class="accordion" id="accordionExample" >
+    <div *ngFor="let item of data; let i=index">
+        <div class="card" >
+            <div class="card-header" id="headingOne{{i}}">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" [attr.data-target]="'#collapseOne'+i" aria-expanded="false" [attr.aria-controls]="'collapseOne'+i">
+                    {{item.id}}
+                </button>
+              </h2>
+            </div>
+        
+            <div id="collapseOne{{i}}" class="collapse" [attr.aria-labelledby]="'headingOne'+i" data-parent="#accordionExample">
+              <div class="card-body" >
+                <table class="table"> 
+                  <thead class="thead-dark">
+                  <tr>
+                      <th>Name</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let it of item.item">
+                      <td>{{it.name}}</td>
+                      <td>{{it.quantity}}</td>
+                      <td>{{it.price}}</td>
+                      <td>{{it.amount}}</td>             
+                  </tr>
+                  <tr><td></td>
+                  <td></td>
+
+                  </tr>
+                  <tr class="thead-dark">
+                      <th>Sub total</th>
+                      <th>Discount</th>
+                      <th>Tax</th> 
+                      <th>Total</th>
+                  </tr>
+                  <tr>
+                      <td>{{item.subtotal}}</td>
+                      <td>{{item.discount}}</td>
+                      <td>{{item.tax}}%</td>             
+                      <td>{{item.total}}</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                        <button routerLink="/edit/{{item.id}}" type="button" class="btn btn-secondary btn-lg btn-block" (click)="updater(i)">Edit</button>
+                    </td>
+                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="deleteInvoice(item.id,i)">Delete</button>
+                    </td>
+                    
+                  </tr>
+                </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

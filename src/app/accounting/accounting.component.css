@@ -3,6 +3,7 @@ table,tbody{
     align-self: center;
     margin: 3% ;
     max-width: 400px;
+    
 }
 input{
     border: 2px solid;
@@ -13,6 +14,13 @@ label.li{
   border: 2px solid;
   border-radius: 5px;
   padding-right: 15ch;
+  font-weight: bold;
+
+}
+label._li{
+  color: rgb(30, 202, 73);
+  border-radius: 5px;
+  padding-right: 5ch;
   font-weight: bold;
 }
 
@@ -25,8 +33,19 @@ h1{
   color: #DC143C
   
 }
+h3{
+  font-family:georgia,garamond,serif;
+  font-style:italic;
+  color: chartreuse
+}
 td{
   font-family:georgia,garamond,serif;
   font-size:16px;
-  font-style:italic
+  font-style:italic;
+  
 }
+
+
+/* .m{
+  color: white
+} */

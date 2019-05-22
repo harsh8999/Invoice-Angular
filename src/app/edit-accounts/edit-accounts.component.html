@@ -1,0 +1,86 @@
+<div>
+    <h1>Edit</h1>
+    <table class="table table-hover">
+    <thead>
+      <tr style="align-items:center" class="bg-danger">
+        <td></td>
+        <td></td>
+        <td>Name</td>
+        <td>Quantity</td>
+        <td>Price</td>
+        <td>Amount</td>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let item of items; let i=index">
+          <td>
+              <button class="btn btn-outline-danger" (click)="remove(i)">Delete</button>
+          </td>
+          <td>
+            <label class="m">{{ i+1 }}</label>
+          </td>
+        <td>
+          <input [(ngModel)]="item.name" placeholder="name" />  
+          <!-- <input type="text" [(ngModel)]="item.name"> -->
+        </td>
+        <td>
+          <input [(ngModel)]="item.quantity" placeholder="Quantity" />
+          <!-- <input type="number" [(ngModel)]="item.quantity"> -->
+        </td>
+        <td>
+            <input [(ngModel)]="item.price" placeholder="Price"/>
+          <!-- <input type="number" [(ngModel)]="item.price"> -->
+        </td>
+        <td>
+            <label class="li">
+                {{ myAmount(i) }}
+              </label>
+        </td>
+      </tr>
+    </tbody> 
+    <hr>
+    <h3>Bill</h3>
+    <tfoot>
+      <tr>
+      <td></td>
+      <td></td>
+      <td>Sub-Total</td>
+      <td>Discount</td>
+      <td>Tax</td>
+      <td>Total</td>
+    </tr>
+      <tr>
+        <td><button class="btn btn-outline-success" (click)="add()">Addition</button></td>
+        <td></td>
+        <td>
+          <label class="li">
+            {{ mySubTotal() }}
+          </label>
+        </td>
+        <td>
+            <input placeholder="Discount" name="d" [(ngModel)]="discount"/>
+        </td>
+        <td>
+            <input placeholder="Tax" name="t" [(ngModel)]="tax"/>
+        </td>
+        <td >
+          <label class="li" >
+            {{ myTotal() }}
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td align="right">
+          <button class="btn btn-primary" (click)="postProduct()">Submit</button>
+        </td>
+      </tr>
+    </tfoot>
+    </table>
+  
+  </div>
